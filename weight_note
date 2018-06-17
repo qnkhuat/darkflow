@@ -1,0 +1,15 @@
+
+
+from darkflow weights:
+yolo.wegits do good flow --model cfg/yolov2.cfg --load bin/yolo.weights
+yolo-full can't run flow --model cfg/v1/yolo-full.cfg --load bin/yolo-full.weights
+tiny-yolo-voc ok but not so nice flow --model cfg/tiny-yolo-voc.cfg --load bin/tiny-yolo-voc.weights
+yolo-tini do very very bad flow --model cfg/v1/yolo-tiny.cfg --load bin/yolo-tiny.weights
+yolov3 lack of layer
+tiny-yolo-v1.1 can't run
+yolov2 is ok flow --model cfg/yolov2.cfg --load bin/yolov2.weights
+
+
+
+
+choose yolov2
