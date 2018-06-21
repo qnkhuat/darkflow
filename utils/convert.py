@@ -83,7 +83,7 @@ def handle_file(image_dir,annotation_dir,output_path,class_name,verbose=False):
 
 
 
-def get_dirs(choose,output_path,delete=False,verbose=False ):
+def convert(choose,output_path,delete=False,verbose=False ):
     count=0
     if delete:
         try:
@@ -131,8 +131,6 @@ def main():
     parser.add_argument('-d','--datapath',dest ='datapath',help='path to data folder',default='/Users/qnkhuat/Documents/carcomp/data')
     parser.add_argument('-dd',dest ='datadest',help='path to copy destination',default='./data')
     parser.add_argument('-v','--verbose',dest ='verbose',help='Turn on verbose mode',action='store_true')
-    parser.add_argument('-vs','--visual',dest ='visual',help='Visualize',action='store_true')
-    parser.add_argument('-c','--copy',dest ='copy',help='Copy images to dir',action='store_true')
     args = parser.parse_args()
 
 
@@ -148,11 +146,7 @@ def main():
 
     choose = open('labels.txt').read().splitlines()
 
-    if is_copy:
-        get_dirs(choose,data_dest,delete=True,verbose=verbose)
-    if is_visual:
-        print('Visualize')
-        visual_images(choose)
+    convert(choose,data_dest,delete=True,verbose=verbose)
     print('Ran in :',time.time() -start)
 
 if __name__ == '__main__':
