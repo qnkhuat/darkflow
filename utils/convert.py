@@ -90,11 +90,11 @@ def convert(choose,output_path,delete=False,verbose=False ):
         try:
             sh.rmtree(output_path)
             print('removed',output_path)
-            os.mkdir(output_path)
+            os.makedirs(output_path)
         except:
             pass
-    os.mkdir(os.path.join(output_path,'images'))
-    os.mkdir(os.path.join(output_path,'annotations'))
+    os.makedirs(os.path.join(output_path,'images'))
+    os.makedirs(os.path.join(output_path,'annotations'))
 
 
     make_map = get_idx_for_make(choose)
