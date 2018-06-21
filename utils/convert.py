@@ -9,8 +9,8 @@ import shutil as sh
 import random
 import argparse
 import xml.etree.cElementTree as ET
-import cv2
 import time
+from scipy.misc import imread
 
 
 def misc():
@@ -49,7 +49,7 @@ def handle_file(image_dir,annotation_dir,output_path,class_name,verbose=False):
     #owner : aborted
 
     #size : width + height + depth
-    shape = cv2.imread(image_dir).shape
+    shape = imread(image_dir).shape
     size = ET.SubElement(root,'size')
     ET.SubElement(size,'height').text = str(shape[0])
     ET.SubElement(size,'width').text = str(shape[1])
