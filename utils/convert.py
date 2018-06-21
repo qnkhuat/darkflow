@@ -84,6 +84,7 @@ def handle_file(image_dir,annotation_dir,output_path,class_name,verbose=False):
 
 
 def convert(choose,output_path,delete=False,verbose=False ):
+    print('Start convert')
     count=0
     if delete:
         try:
@@ -139,8 +140,6 @@ def main():
     data_dest = args.datadest
     # assert 'image' in data_dest , "destination can't not be image "
     verbose = args.verbose
-    is_copy = args.copy
-    is_visual = args.visual
 
     start = time.time()
 
